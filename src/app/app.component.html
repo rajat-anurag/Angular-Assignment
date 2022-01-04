@@ -1,0 +1,72 @@
+
+<nav  *ngIf="this.routes.url != '/'"  style="background-color: #3f51b5;" class="navbar navbar-expand-sm fixed-top hidden-sm hidden-xs">
+
+  <div class="navbar-collapse collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" >
+        <a style="color: white;" class="navbar-brand" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"   routerLink="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white"  routerLinkActive="active" routerLink="/route1">Route1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLinkActive="active" routerLink="/route2">Route2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLinkActive="active" routerLink="/route3">Route3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLinkActive="active" routerLink="/route4">Route4</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLinkActive="active" routerLink="/route5">Route5</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLinkActive="active" routerLink="/route6">Route6</a>
+      </li>
+    </ul>
+
+  
+
+  </div>
+</nav>
+
+<nav  *ngIf="this.routes.url != '/'" style="background-color: #3f51b5;" class="navbar visible-xs visible-sm">
+
+  <button class="navbar-toggler navbar-toggler-left"
+    type="button"
+    aria-controls="mobileNavbar"
+    aria-expanded="false"
+    [attr.aria-expanded]="!isCollapsed"
+    aria-label="Toggle mobile navigation"
+    (click)="toggleMenu()"
+    >
+      	<mat-icon style="color: white;">menu</mat-icon>
+  </button>
+  <div class="collapse navbar-collapse" id="mobileNavbar" [ngbCollapse]="isCollapsed">
+    <ul class="navbar-nav mr-auto">
+      <li (click)="isCollapsed=!isCollapsed" class="nav-item active">
+        <a class="nav-link text-white" routerLink="/route1">Route1</a>
+      </li>
+      <li (click)="isCollapsed=!isCollapsed"  class="nav-item">
+        <a class="nav-link text-white" routerLink="/route2">Route2</a>
+      </li>
+      <li (click)="isCollapsed=!isCollapsed"  class="nav-item">
+        <a class="nav-link text-white" routerLink="/route3">Route3</a>
+      </li>
+      <li (click)="isCollapsed=!isCollapsed"  class="nav-item">
+        <a class="nav-link text-white" routerLink="/route4">Route4</a>
+      </li>
+      <li (click)="isCollapsed=!isCollapsed"  class="nav-item">
+        <a class="nav-link text-white" routerLink="/route5">Route5</a>
+      </li>
+      <li (click)="isCollapsed=!isCollapsed"  class="nav-item">
+        <a class="nav-link text-white" routerLink="/route6">Route6</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>

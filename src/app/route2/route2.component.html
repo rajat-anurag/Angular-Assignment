@@ -1,0 +1,142 @@
+
+<mat-card class="card1" >
+  <h1 style="text-align: center;">Route 2: An e-commerce category page  which displays   40 products  in  a page  </h1>
+  <hr>
+  <br>
+
+
+
+
+
+<div style="margin-left: 120px;">
+<mat-button-toggle-group  #group="matButtonToggleGroup" (click)="layoutView(group.value)">
+    <mat-button-toggle value="grid" aria-label="Text align left">
+      <mat-icon>grid_on</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="list" aria-label="Text align center">
+      <mat-icon>list</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+
+
+      
+  <mat-form-field appearance="outline"  style="margin-left: 55px;" >
+    <mat-select placeholder="Sort By Price"  (selectionChange)="changeView($event.value)">
+    <mat-option  *ngFor="let view of filterTypes" [value]="view">
+      {{view}}
+    </mat-option>
+  </mat-select>
+
+</mat-form-field>
+
+<mat-form-field appearance="outline"  style="margin-left: 55px;" >
+  <mat-select placeholder="Enter Price Range"  (selectionChange)="changePrice($event.value)">
+  <mat-option  *ngFor="let view of priceTypes" [value]="view">
+    {{view}}
+  </mat-option>
+</mat-select>
+
+</mat-form-field>
+
+<mat-form-field  appearance="outline"  style="margin-left: 55px;width: 250px;">
+  <mat-label>Enter Product Name To Search</mat-label>
+  <input  [(ngModel)]="searchText" matInput value="Google">
+</mat-form-field>
+
+<button (click)="filterProductList()" id="searchButton" style="padding: 10px;margin-left: 10px;" class="btn btn-primary">
+  Search Product
+</button>
+
+
+</div>
+</mat-card>
+
+
+<div *ngIf = "viewLayout == 'grid'" class="gridView">
+
+  <div *ngFor="let product of tempProductList">
+ 
+    <div class="card">
+      <figure>
+        <img src="{{product.image}}" style="width: 250px;height: 200px;" alt="t-shirt">
+      </figure>
+      <section class="details">
+      
+        <div class="min-details">
+          <div style="text-align: center;">{{product.productName}} </div>
+          <div class="txt txt-primary" style="text-align: center;" class="price">Price:Rs {{product.price}}</div>
+          <div style="text-align: center;" class="price">Color: {{product.color}}</div>
+          <div style="text-align: center;" class="price">Product Adjective: {{product.productAdjective}}</div>
+          <div style="text-align: center;" class="price">Product material: {{product.productMaterial}}</div>
+          <div style="text-align: center;" class="price">Product: {{product.product}}</div>
+        </div>
+    
+      
+          
+    
+      
+     
+      </section>
+    </div>
+  </div>
+
+</div>
+
+
+<div *ngIf = "viewLayout == 'list'" class="listView">
+
+  <div *ngFor="let product of tempProductList">
+ 
+    <div class="card1">
+      <figure>
+        <img src="{{product.image}}" style="width: 530px;height: 400px;" alt="t-shirt">
+      </figure>
+      <section class="details">
+      
+        <div class="min-details">
+          <div class="listViewData">{{product.productName}} </div>
+          <div class="listViewData">Price:Rs {{product.price}}</div>
+          <div class="listViewData">Color: {{product.color}}</div>
+          <div class="listViewData">Product Adjective: {{product.productAdjective}}</div>
+          <div class="listViewData">Product material: {{product.productMaterial}}</div>
+          <div class="listViewData">Product: {{product.product}}</div>
+        </div>
+    
+      
+          
+    
+      
+     
+      </section>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<!-- -------------------------------------------------------- -->
+  <!-- <mat-grid-list cols="4"  *ngIf = "viewLayout == 'grid'">
+  
+    <mat-grid-tile *ngFor= "let product of productArray ">
+      <div>{{product.productName}}</div>
+      <br>
+      <div>{{product.price}}</div>
+    <img src="assets/img/shoes.jpg" />
+    
+    
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  <mat-grid-list cols="2" rowHeight="5:1" *ngIf = "viewLayout == 'list'">
+    <mat-grid-tile>1</mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-tile>1</mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+  </mat-grid-list> -->

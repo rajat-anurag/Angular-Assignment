@@ -1,0 +1,24 @@
+ <mat-card style="margin:10px">
+
+
+    <h1 style="text-align: center;">Route-3 : A count down timer page  with  four  sibling components  in it. (Using @Input and @Output)  </h1>
+    <hr>
+    <br>
+
+
+<div class="inline-box">
+    <div class="child-row" style="border: 1px solid black;">
+        <app-count-down-timer [counterValue]="counterValue" (pausedCounterValue)="GetPauseData($event)"></app-count-down-timer>
+        </div>
+        <div class="child-row" style="border: 1px solid black;">
+                <app-counter-actions [pausedCounterValue]="pausedCounterValue" (counterOutput) ="GetChildData($event)" ></app-counter-actions>
+                <app-counter-action-logger [counterValue]="counterValue" [pausedCounterValue]="pausedCounterValue"></app-counter-action-logger>
+            </div>    
+</div>
+<div class="inline-box1">
+    <div class="child-row" style="border: 1px solid black; padding: 0px;">
+        <app-action-counter [counterValue]="counterValue" ></app-action-counter>
+    </div>  
+</div>
+<br>
+</mat-card>

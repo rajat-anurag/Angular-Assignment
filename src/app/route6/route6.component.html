@@ -1,0 +1,29 @@
+
+<mat-card style="margin:10px">
+  <h1 style="text-align: center;">Route-6:   Dynamically  create  div’s on the page with 200x 200 dimensions.  </h1>
+  <hr>
+  <h2 style="text-align: center;">Scroll The Content to Add New Div Dynamically</h2>
+  <hr>
+</mat-card>
+
+
+
+
+<div id="outerDiv">
+ 
+
+  
+    <div id="innerDiv" *ngFor="let container of divContainers">
+
+      <mat-card>
+
+   <h1 style="margin-left:65px">Div {{container+1}}  </h1>  
+   <hr>
+    
+    <button class="btn btn-primary btn1" (click)="ShowAlert(container)" >Button</button>
+  </mat-card>
+    
+    </div>
+  
+    <br>
+  </div>

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+.card {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    height: auto;
+    overflow: hidden;
+    width: 280px;
+}
+
+
+.card1 {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    height: auto;
+    overflow: hidden;
+    width: 580px;
+}
+
+
+
+.card > figure {
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.card1 > figure {
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.card > figure > img {
+    width: 100%;
+}
+
+.card1 > figure > img {
+    width: 100%;
+}
+
+.listViewData{
+    text-align: center;font-size: 26px;margin-top: 5px;margin-bottom: 5px;
+}
+
+
+.gridView{
+    display: grid;gap: 10px;margin-left: 50px;grid-template-columns: repeat(4,1fr);
+}
+
+.listView{
+     display:grid;gap: 120px;margin-left: 50px;grid-template-columns: repeat(2,1fr);
+}
+
+.card1{
+    margin:15px;margin-left:50px;width:91.5% ;
+}
+
+
+@media(max-width:800px){
+    
+.gridView{
+    display: grid;gap: 10px;margin-left: 50px;grid-template-columns: repeat(2,1fr);
+}
+}
+
+
+@media(max-width:800px){
+    
+    .listView{
+        display:grid;gap: 10px;margin-left: 50px;grid-template-columns: repeat(1,1fr);
+    }
+    }
+    
+

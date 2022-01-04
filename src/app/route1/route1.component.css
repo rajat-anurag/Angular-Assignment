@@ -1,0 +1,59 @@
+.marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+  }
+  
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 5s linear infinite;
+    font-size: 21px;
+  }
+  
+  .marquee2 span {
+    animation-delay: 10s;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+  .heading{
+    text-align: center;
+  }
+
+  .div1{
+    width: 94%;height: 530px;border: 2px solid black;margin:20px auto
+  }
+  .div2{
+    width: 92%;height: 480px;border: 2px solid black;margin:20px auto
+  }
+  .div3{
+    width: 90%;height: 380px;border: 2px solid black;margin:40px auto
+  }
+
+  .div4{
+    width: 88%;height: 280px;border: 2px solid black;margin:40px auto
+  }
+
+  .div5{
+    width: 86%;height: 180px;border: 2px solid black;margin:40px auto
+  }
+
+  .div6{
+    width: 84%;height: 80px;border: 2px solid black;margin:40px auto
+  }
+
+  .div7{
+    width: 82%;height: 50px;border: 2px solid black;margin:20px auto
+  }
+
+  .div8{
+    width: 80%;height: 30px;border: 2px solid black;margin:7px auto
+  }

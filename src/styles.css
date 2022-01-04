@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+.mat-tab-label{
+    background-color: darkblue;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.mat-tab-label-active{
+    background-color: darkorange;
+    color: white;
+    border-radius: 5px;
+}
+
+body,html{
+    background-color: #f0f0f0;
+}
+
+.mat-sort-header-arrow {
+    transform-origin: right;
+    left: 0;
+    color: white;
+    font-size: 30px;
+}
+
+mat-card{
+    margin:10px
+}
